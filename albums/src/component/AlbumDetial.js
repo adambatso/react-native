@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import { Image,Text, View } from 'react-native';
+import React from 'react';
+import { Image,Text, View ,Linking} from 'react-native';
 import Card from './Card.js'
 import CardSection from './CardSection.js'
 import Button from './Button.js'
 
 const AlbumsDetial = (props) => {
 
-    const { title,thumbnail_image,artist,image } = props.albumCheck,
+    const { title,thumbnail_image,artist,image ,url} = props.albumCheck,
           { thmbnailImage,headerContainer,albumImage,headerFontSize} = styles;
     return (
         <Card>
@@ -27,7 +27,9 @@ const AlbumsDetial = (props) => {
             />
             </CardSection>
             <CardSection>
-            <Button/>
+            <Button  onPressFunction={()=>Linking.openURL(url)}>
+            Click to by this album
+            </Button>
             </CardSection>
             
         </Card>

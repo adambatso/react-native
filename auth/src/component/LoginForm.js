@@ -9,7 +9,7 @@ state={text:'Entre User Name '};
             <Card>
                 <CardSection>
                     <TextInput
-                        style={{height:20 , width:100}}
+                        style={{height:40 ,flex:1, width:null}}
                         onChangeText={userText=>this.setState({text:userText})}
                         value={this.state.text}
                         >
